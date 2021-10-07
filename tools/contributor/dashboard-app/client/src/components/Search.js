@@ -40,11 +40,7 @@ class Search extends Component {
 
   handleButtonClick = () => {
     const { searchValue } = this.state;
-    if (searchValue) {
-      this.searchPRs(searchValue);
-    } else {
-      this.inputRef.current.focus();
-    }
+    searchValue ? this.searchPRs(searchValue) : this.inputRef.current.focus();
   };
 
   handleOptionChange = (changeEvent) => {
